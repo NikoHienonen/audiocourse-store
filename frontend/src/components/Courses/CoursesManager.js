@@ -6,7 +6,7 @@ import { CourseConsumer } from '../../Coursecontext';
 const CoursesManager = () => {
   return (
     <div className="content">
-      <h1>Koulutukset</h1>
+      <h1>Courses</h1>
       <CourseConsumer>
         {value => {
           return <Courses 

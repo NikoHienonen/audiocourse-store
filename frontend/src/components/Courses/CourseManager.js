@@ -19,11 +19,11 @@ const CourseManager = (props) => {
             signUpForACourse={value.signUpForACourse}
             getUserCourses={value.getUserCourses}/>
             <div className="course-nav">
-              <Link to="/home" className="button">Palaa</Link>
-              <Link to="/profile" >Oma profiili</Link>
+              <Link to="/home" className="button">Back</Link>
+              <Link to="/profile" >My Profile</Link>
               <p>
                 <i class="fas fa-info-circle"></i> 
-                Omasta profiilista voi hallita ilmoittautumisia
+                You can control your course choices from the "My profile"-page!
               </p>
             </div>
           </div>

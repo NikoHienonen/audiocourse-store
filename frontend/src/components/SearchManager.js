@@ -13,10 +13,10 @@ const SearchManager = (props) => {
         return (
         <div className="content">
           <div className="search-field generic-container">
-            <h1>Kurssihaku</h1>
-            <h3>Hakutulokset hakuehdolle: "{parameter}"</h3>
+            <h1>Course Search</h1>
+            <h3>Results with the parameter: "{parameter}"</h3>
             <Coursesearch getCourses={value.getCourses} parameter={parameter}/>
-            <Link to="/home" className="button">Palaa</Link>
+            <Link to="/home" className="button">Back</Link>
           </div>
         </div>
         )

@@ -6,18 +6,19 @@ const CourseContext = React.createContext()
 export const CourseConsumer = CourseContext.Consumer
 
 class CourseProvider extends React.Component {
+  state = {url: 'http://localhost:8080'}
   componentDidMount() {
     this.checkIfFirstSignIn();
   }
   checkIfFirstSignIn = () => {
     let visited = sessionStorage.getItem("visited");
-    if(visited !== "true" && !visited) {
+    if(visited !== "true" || !visited) {
       sessionStorage.setItem("visited", "true");
       sessionStorage.setItem("userCourses", "4324, 2352");
     }
   }
   getCourses = (callback) => {
-    axios.get('/courses')
+    axios.get(this.state.url+'/courses')
     .then(result => {
       callback(result.data);
     })

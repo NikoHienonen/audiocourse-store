@@ -25,14 +25,14 @@ class Course extends Component {
   alreadySignedUpUpper = (id) => {
     if(this.state.userCourses) {
       return this.state.userCourses.includes(id)
-      ? <div className="sign-up">Ilmoittauduttu!</div>
+      ? <div className="sign-up">Signed Up!</div>
       : null
     }
   }
   alreadySignedUpLower = (id) => {
     if(this.state.userCourses) {
       return this.state.userCourses.includes(id)
-      ? <p className="sign-up detail">Ilmoittauduttu!</p>
+      ? <p className="sign-up detail">Signed Up!</p>
       : <button className="navbutton detail" onClick={() => {this.onSignUp(id)}}>Ilmoittadu</button>
     } else {
       return <button className="navbutton detail" onClick={() => {this.onSignUp(id)}}>Ilmoittadu</button>
@@ -53,9 +53,9 @@ class Course extends Component {
           <h2>{name}</h2>
         </div>
           <div className="card-intro">
-            <p>Kategoria: {category}</p>
-            <p>Opettaja: {teacher}</p>
-            <p>Kesto: {span}</p>
+            <p>Category: {category}</p>
+            <p>Teacher: {teacher}</p>
+            <p>Span: {span}</p>
           </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit non curabitur, tellus
@@ -76,7 +76,7 @@ class Course extends Component {
           Laoreet himenaeos fames nulla urna interdum sociosqu ad tellus auctor, inceptos 
           ante torquent consequat commodo nullam nostra.
         </p>
-        <ul className="tags"><li>Tägit: </li>{this.renderTags(tags)}</ul>
+        <ul className="tags"><li>Tags: </li>{this.renderTags(tags)}</ul>
         {this.alreadySignedUpLower(id)}
         </React.Fragment>
     );

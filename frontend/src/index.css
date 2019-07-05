@@ -1,7 +1,7 @@
 :root {
-  --purple: #451491;
-  --light-purple: #7120eb;
-  --overlay: rgba(78, 0, 142, 0.85);
+  --primary: #CB2D6F;
+  --secondary: #F35597;
+  --overlay: rgba(80, 31, 58, 0.97);
   --menu-speed: 0.75s;
 }
 @import url("menu.css");
@@ -15,7 +15,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: "Open Sans",sans-serif;
-  background-color: var(--purple);
+  background-color: var(--primary);
 }
 
 .container {
@@ -37,7 +37,7 @@ body, html {
 }
 header {
   width: 100%;
-  background-color: var(--purple);
+  background-color: var(--primary);
   height: 5rem;
 }
 h1.header  {
@@ -46,9 +46,11 @@ h1.header  {
   margin-left: 6rem;
   width: auto;
 }
-img.header {
-  height: 5rem;
+header i {
+  font-size: 4rem;
+  color: white;
   float: right;
+  margin-right: 0.2rem;
 }
 h2 {
   font-size: 2rem;
@@ -84,9 +86,14 @@ h2 {
   background-color: white;
   overflow: hidden;
   text-overflow: ellipsis;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.course-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .card-head i {
-  color: var(--purple);
+  color: var(--primary);
   font-size: 4rem;
   margin: 1rem;
 }
@@ -171,16 +178,16 @@ ul.search li a,  ul.tags li a{
   text-decoration: none;
   transition: all 0.2s ease-in;
   font-size: 1.2rem;
-  color: var(--purple);
+  color: var(--primary);
 }
 ul.search li a:hover, ul.tags li a:hover{
-  color: var(--light-purple);
+  color: var(--secondary);
 }
 .navbutton {
   font-size: 0.8rem;
   display: inline-block;
   border: none;
-  background-color: var(--purple);
+  background-color: var(--primary);
   color: #fff;
   padding: 0.75rem 1.5rem;
   margin: 0.5rem auto;
@@ -252,7 +259,7 @@ div.contacts {
 }
 div.contacts > div.contact-card {
   padding: 0.5rem 1rem;
-  border: 1.5px solid var(--purple);
+  border: 1.5px solid var(--primary);
   margin-top: 1rem;
 }
 
@@ -287,7 +294,7 @@ div.contacts > div.contact-card {
 @media screen and (min-width: 920px) {
   h1 {
     font-size: 4rem;
-    color: var(--purple);
+    color: var(--primary);
   }
   .courses {
     grid-template-columns: auto auto auto;

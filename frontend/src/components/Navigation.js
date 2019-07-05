@@ -26,9 +26,9 @@ class Navigation extends Component {
             <div>
               <ul  onClick={this.onClick}>
                 <li><Search/></li>
-                <li><Link to="/home" className="menu-item">Etusivu</Link></li>
-                <li><Link to="/profile" className="menu-item">Oma Profiili</Link></li>
-                <li><Link to="/contact" className="menu-item">Ota Yhteyttä</Link></li>
+                <li><Link to="/home" className="menu-item">Home</Link></li>
+                <li><Link to="/profile" className="menu-item">My Profile</Link></li>
+                <li><Link to="/contact" className="menu-item">Contact</Link></li>
                 <li><Logout/></li>
               </ul>
             </div>

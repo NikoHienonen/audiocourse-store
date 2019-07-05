@@ -24,7 +24,7 @@ class Profile extends Component {
   }
   renderCourses = () => {
     if(this.state.myCourses.length === 0) {
-      return <p>Et ole ilmoittautunut kursseille vielä!</p>
+      return <p>You have not signed up to courses yet!</p>
     } else {
       let renderedCourses = this.state.myCourses.map(course => {
         const { id, name, category, span, teacher} = course;
@@ -34,12 +34,12 @@ class Profile extends Component {
               <h2>{name}</h2>
             </div>
             <div className="card-intro">
-              <p>Kategoria: {category}</p>
-              <p>Opettaja: {teacher}</p>
-              <p>Kesto: {span}</p>
+              <p>Category: {category}</p>
+              <p>Teacher: {teacher}</p>
+              <p>Span: {span}</p>
             </div>
             <button className="navbutton" onClick={() => {this.cancelSignUp(course.id)}}>
-              Peru ilmoittautuminen
+              Cancel
             </button>
           </div> 
         )
@@ -50,14 +50,14 @@ class Profile extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Profiili</h1>
-        <img className="profile-pic" alt="profiilikuva" src={process.env.PUBLIC_URL + '/teacher.png'}/>
+        <h1>Profile</h1>
+        <img className="profile-pic" alt="profile" src={process.env.PUBLIC_URL + '/user.png'}/>
         <div className="introduction">
-          <p>Nimi: Kaisla Salo</p>
-          <p>Työnimike: Lehtori</p>
-          <p>Polku: IB</p>
+          <p>Name: John Holloway</p>
+          <p>Occupation: Audio Producer</p>
+          <p>Courses done: 2</p>
         </div>
-        <h2>Kurssini</h2>
+        <h2>My Courses</h2>
         <div className="courses">
           <this.renderCourses/>
         </div>

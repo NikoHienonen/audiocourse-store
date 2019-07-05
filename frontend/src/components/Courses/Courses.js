@@ -31,9 +31,14 @@ export default class Courses extends Component {
   signedRender = (id) => {
     if (!this.state.noCourses) {
       return this.state.userCourses.includes(id) 
-      ? <div className="sign-up">Ilmoittauduttu!</div>
+      ? <div className="sign-up">Signed Up!</div>
       : null
     }
+  }
+  span = (span) => {
+    return span === 1 
+    ? 'month'
+    : 'months'
   }
   renderCourses = () => {
     let renderedCourses = this.state.courses.map(course => {
@@ -46,11 +51,11 @@ export default class Courses extends Component {
             <h3>{name}</h3>
           </div>
           <div className="card-intro">
-            <p>Kategoria: {category}</p>
-            <p>Opettaja: {teacher}</p>
-            <p>Kesto: {span}</p>
+            <p>Category: {category}</p>
+            <p>Teacher: {teacher}</p>
+            <p>Span: {span} {this.span(span)}</p>
           </div>
-          <Link name="Search" className="navbutton" to={"/course/"+id}>Lue lisää</Link>
+          <Link name="Search" className="navbutton" to={"/course/"+id}>Read more!</Link>
         </div> 
       )
     });

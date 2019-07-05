@@ -23,7 +23,7 @@ function App() {
           <Navigation/>
             <div className="container">
               <div className="overlay"></div>
-              <img src="kirjat.jpg" className="background" alt="backgroundimg"></img>
+              <img src="background.jpg" className="background" alt="backgroundimg"></img>
               <Switch>
                 <PrivateRoute exact path ="/" component={Landing}/>
                 <PrivateRoute exact path="/home" component={Landing}/>

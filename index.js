@@ -13,123 +13,123 @@ const server = app.listen(process.env.PORT || 8080);
 
 let courses = [
     {id: 4324
-      , name: "Javascript perusteet"
-      , category: "Ohjelmointi"
-      , span: 2
-      , teacher: "Jukka Puhjolainen"
-      , tags: ["ohjelmointi", "javascript", "puhjolainen"]
+      , name: "Drum Mics"
+      , category: "Recording"
+      , span: 1
+      , teacher: "Andy Mattson"
+      , tags: ["recording", "drums", "mattson"]
     }
     , {id: 4624
-      , name: "Tiimi johtaminen"
-      , category: "Yrittäjyys"
+      , name: "Substractive EQ"
+      , category: "Mixing"
       , span: 1
-      , teacher: "Jaana Koivumaa"
-      , tags: ["yrittäjyys", "tiimi", "koivumaa"]
+      , teacher: "Madison Hill"
+      , tags: ["mixing", "eq", "hill"]
     }
     , {id: 5323
-      , name: "PHP:n Salat"
-      , category: "Ohjelmointi"
+      , name: "Guitar re-amp"
+      , category: "Recording"
       , span: 1
-      , teacher: "Petri Alaruusi"
-      , tags: ["ohjelmointi", "php", "alaruusi"]
+      , teacher: "David Lowe"
+      , tags: ["recording", "guitar", "lowe"]
     }
     , {id: 2352
-      , name: "Meditaatio Osana Arkea"
-      , category: "Työhyvinvointi"
+      , name: "What is Mastering?"
+      , category: "Mastering"
       , span: 1
-      , teacher: "Heimo Nikonen"
-      , tags: ["hyvinvointi", "meditaatio", "nikonen"]
+      , teacher: "Nick Finen"
+      , tags: ["mastering", "mastering", "finen"]
     }
     , {id: 7646
-      , name: "Yrittäjän Laskutus ja Verotus"
-      , category: "Yrittäjyys"
+      , name: "Echo effects"
+      , category: "Mixing"
       , span: 2
-      , teacher: "Hannu Jussinen"
-      , tags: ["yrittäjyys", "vero", "jussinen"]
+      , teacher: "Donald Kingdon"
+      , tags: ["mixing", "echo", "kingdon"]
     }
     , {id: 9305
-      , name: "Verkkoyrittäjyys"
-      , category: "Yrittäjyys"
+      , name: "Metal Compression"
+      , category: "Mixing"
       , span: 1
-      , teacher: "Joona Poromies"
-      , tags: ["yrittäjyys", "verkko", "poromies"]
+      , teacher: "Sander Taylor"
+      , tags: ["mixing", "compression", "taylor"]
     }
     , {id: 6345
-      , name: "Web-ohjelmoinnin perusteet"
-      , category: "Ohjelmointi"
+      , name: "Room Mics"
+      , category: "Recording"
       , span: 2
-      , teacher: "Heimo Nikonen"
-      , tags: ["ohjelmointi", "html", "css","nikonen"]
+      , teacher: "Nick Finen"
+      , tags: ["recording", "room", "finen"]
     }
     , {id: 1005
-      , name: "Tehokas mainonta"
-      , category: "Yrittäjyys"
+      , name: "Starting with MIDI"
+      , category: "Mixing"
       , span: 1
-      , teacher: "Noora Louhamo"
-      , tags: ["yrittäjyys", "mainonta", "louhamo"]
+      , teacher: "Hannah Tap"
+      , tags: ["mixing", "midi", "tap"]
     }
     , {id: 3334
-      , name: "Design perusteet"
-      , category: "Visuaalisuus"
+      , name: "Studio Coziness"
+      , category: "Studio"
       , span: 2
-      , teacher: "Teemu Mäntyluoto"
-      , tags: ["visuaalisuus", "design", "mäntyluoto"]
+      , teacher: "Mark Pine"
+      , tags: ["studio", "cozy", "pine"]
     }
     , {id: 6255
-      , name: "Viihtyisä toimisto"
-      , category: "Työhyvinvointi"
+      , name: "Loudness Wars"
+      , category: "Mastering"
       , span: 1
-      , teacher: "Alina Alalah"
-      , tags: ["työhyvinvointi", "alalah"]
+      , teacher: "Christina Lyone"
+      , tags: ["mastering", "loudness", "lyone"]
     }
     , {id: 5455
-      , name: "Vektorit"
-      , category: "Visuaalisuus"
+      , name: "DAW Selection"
+      , category: "Misc"
       , span: 1
-      , teacher: "Teemu Mäntyluoto"
-      , tags: ["visuaalisuus", "vektorit", "mäntyluoto"]
+      , teacher: "Mark Pine"
+      , tags: ["misc", "daw", "pine"]
     }
     , {id: 4666
-      , name: "D.R.Y. Ohjelmointi"
-      , category: "Ohjelmointi"
+      , name: "Vocal Recording"
+      , category: "Recording"
       , span: 2
-      , teacher: "Jukka Puhjolainen"
-      , tags: ["ohjelmointi", "dry", "puhjolainen"]
+      , teacher: "Andy Mattson"
+      , tags: ["recording", "vocals", "mattson"]
     }
     , {id: 6549
-      , name: "Hyöty- ja taukojumppa"
-      , category: "Työhyvinvointi"
+      , name: "Stereo Image"
+      , category: "Mixing"
       , span: 1
-      , teacher: "Kalle Pöyski"
-      , tags: ["työhyvinvointi", "liikunta", "pöyski"]
+      , teacher: "Maximillian Dolt"
+      , tags: ["mixing", "stereo", "Dolt"]
     }
     , {id: 1112
-      , name: "Asiakaskohtaaminen"
-      , category: "Yrittäjyys"
+      , name: "Mixing Metal Guitars"
+      , category: "Mixing"
       , span: 2
-      , teacher: "Joona Poromies"
-      , tags: ["yrittäjyys", "asiakas", "poromies"]
+      , teacher: "Sander Taylor"
+      , tags: ["mixing", "guitars", "metal", "taylor"]
     }
     , {id: 5311
-      , name: "Reactin salat"
-      , category: "Ohjelmointi"
+      , name: "Choir Recording"
+      , category: "Recording"
       , span: 2
-      , teacher: "Jukka Puhjolainen"
-      , tags: ["ohjelmointi", "react", "puhjolainen"]
+      , teacher: "Andy Mattson"
+      , tags: ["recording", "choir", "mattson"]
     }
     , {id: 4242
-      , name: "Backend ratkaisut"
-      , category: "Ohjelmointi"
+      , name: "Basics of Recording"
+      , category: "Recording"
       , span: 3
-      , teacher: "Jukka Puhjolainen"
-      , tags: ["ohjelmointi", "backend", "puhjolainen"]
+      , teacher: "Andy Mattson"
+      , tags: ["recording", "basics", "mattson"]
     }
     , {id: 6454
-      , name: "Päiväunet työpaikalla"
-      , category: "Työhyvinvointi"
+      , name: "Top-Down Mixing"
+      , category: "Mixing"
       , span: 1
-      , teacher: "Heimo Nikonen"
-      , tags: ["työhyvinvointi", "nikonen"]
+      , teacher: "Nick Finen"
+      , tags: ["työhyvinvointi", "finen"]
     }
 ]
 

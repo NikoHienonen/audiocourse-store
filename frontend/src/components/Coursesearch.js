@@ -18,7 +18,7 @@ class Coursesearch extends Component {
   }
   renderCourses = () => {
     if(this.state.searchCourses.length === 0) {
-      return <p>Ei kursseja hakuehdolla!</p>
+      return <p>No courses with the query!</p>
     } else {
       let courses =  this.state.searchCourses.map(course => {
         return <li key={course.id}>
