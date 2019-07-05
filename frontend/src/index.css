@@ -1,0 +1,317 @@
+:root {
+  --purple: #451491;
+  --light-purple: #7120eb;
+  --overlay: rgba(78, 0, 142, 0.85);
+  --menu-speed: 0.75s;
+}
+@import url("menu.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+  background-color: var(--purple);
+}
+
+.container {
+  overflow: hidden; 
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  position: relative;
+  min-height: 85vh;
+}
+.content {
+  padding: 0.5rem;
+  z-index: 2;
+  position: relative;
+}
+.generic-container {
+  padding: 1rem 0.5rem;
+  min-height: 80vh;
+  background-color: white;
+}
+header {
+  width: 100%;
+  background-color: var(--purple);
+  height: 5rem;
+}
+h1.header  {
+  font-size: 4rem;
+  color: white;
+  margin-left: 6rem;
+  width: auto;
+}
+img.header {
+  height: 5rem;
+  float: right;
+}
+h2 {
+  font-size: 2rem;
+}
+.profile {
+  padding: 0 1rem;
+  margin: 1rem auto;
+}
+.courses {
+  padding: 0 1rem;
+  margin: 1rem auto;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: auto;
+  z-index: 1;
+}
+.profile h2, h1 {
+  margin: 1rem 0;
+}
+.profile h2 {
+  font-size: 1.5rem;
+}
+.myCourses > .course-card{
+  width: 10rem;
+  float: left;
+  margin-right: 1rem;
+}
+.course-card {
+  border: 1px solid lightgray;
+  text-align: center;
+  padding: 1rem;
+  min-width: 50%;
+  background-color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-head i {
+  color: var(--purple);
+  font-size: 4rem;
+  margin: 1rem;
+}
+.card-head h3 {
+  font-size: 1.4rem;
+  text-overflow: ellipsis;
+}
+.card-intro p{
+  margin: 0.2rem 0;
+}
+.course-detail {
+  width: auto;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  background-color: white;
+}
+.course-detail h2, p {
+  margin: 1rem 0;
+}
+.profile {
+  background-color: white;
+  padding-top: 1rem;
+  min-height: 70vh;
+}
+img.profile-pic {
+  max-width: 80vw;
+  border-radius: 50%;
+  margin: 1rem auto;
+  display: inline-block;
+}
+div.introduction {
+  display: inline-block;
+  margin-bottom: -50rem;
+  margin-left: 1rem;
+}
+div.introduction > * {
+  font-size: 1.1rem;
+  line-height: 1rem;
+}
+.sign-up {
+  background-color: green;
+  color: white;
+  float: left;
+  padding: 0.2rem 2rem;
+  position: absolute;
+  margin-top: 1.5rem;
+  margin-left: -4rem;
+  transform: rotate(-40deg); 
+  font-size: 1.2rem;
+}
+.sign-up.detail {
+  transform: none;
+  position: inherit;
+  margin: 1rem;
+  display: block;
+  clear: both;
+}
+.card-head {
+  text-align: center;
+}
+.search-field {
+  background-color: white;
+  padding: 1rem 3rem;
+  min-height: 80vh;
+}
+ul.search {
+  list-style: none;
+  margin: 1rem;
+}
+ul.tags {
+  list-style: none;
+  width: 50vw;
+}
+ul.tags li {
+  float: left;
+  padding: 0 0.5rem;
+}
+ul.search li {
+  padding: 0.2rem;
+}
+ul.search li a,  ul.tags li a{
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+  font-size: 1.2rem;
+  color: var(--purple);
+}
+ul.search li a:hover, ul.tags li a:hover{
+  color: var(--light-purple);
+}
+.navbutton {
+  font-size: 0.8rem;
+  display: inline-block;
+  border: none;
+  background-color: var(--purple);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem auto;
+  margin-right: 0.3rem;
+  text-decoration: none;
+  transition: opacity 0.5s ease-in;
+  cursor: pointer;
+}
+.navbutton:hover {
+  opacity: 0.7;
+}
+.navbutton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+div.addnew {
+  background-color: white;
+  padding: 3rem;
+  min-height: 80vh;
+}
+div.addnew form input {
+  resize: none;
+}
+form label {
+  font-size: 1.5rem;
+}
+form input {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+}
+p.sub {
+  font-size: 1.2rem;
+  background-color: green;
+  color: white;
+  width: 20rem;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+}
+div.course-nav, button.detail {
+  display: block;
+  clear: both;
+}
+button.detail {
+  float: left;
+  margin: 1rem 0.5rem;
+}
+div.course-nav > * {
+  margin-left: 0.5rem;
+}
+.container img.background {
+  display: initial;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+.container div.overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.8;
+}
+div.contacts {
+  margin: 1rem;
+  display: inline-block;
+}
+div.contacts > div.contact-card {
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--purple);
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .generic-container {
+    padding: 1rem 3rem;
+    padding-bottom: 5rem;
+    width: 90%;
+    min-height: 80vh;
+    background-color: white;
+  }
+  .card-head h3 {
+    font-size: 2rem;
+  }
+  .courses {
+    grid-template-columns: auto auto;
+  }
+  .navbutton {
+    font-size: 1rem;
+  }
+  .course-detail {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    padding-bottom: 5rem;
+  }
+  .profile {
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  h1 {
+    font-size: 4rem;
+    color: var(--purple);
+  }
+  .courses {
+    grid-template-columns: auto auto auto;
+  }
+  .content {
+    margin: auto 3rem;
+  }
+  
+  .profile {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .profile > h2 {
+    font-size: 3rem;
+  }
+  div.introduction > * {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+  div.contacts {
+    width: 90%;
+    margin: 3rem;
+  }
+  div.contacts > div.contact-card {
+    font-size: 2rem;
+  }
+}
