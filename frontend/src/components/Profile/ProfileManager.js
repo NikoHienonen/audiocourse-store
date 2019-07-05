@@ -17,7 +17,7 @@ const ProfileManager = (props) => {
             getCourses={value.getCourses}
             cancelSignUp={value.cancelSignUp}
             />
-            <Link to="/home" className="button">Palaa</Link>
+            <Link to="/home" className="button">Back</Link>
           </div>
         </div>
         )
