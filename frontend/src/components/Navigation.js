@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Search from './Search';
-import Contact from './Contact';
-import Logout from './Logout';
 
 class Navigation extends Component {
   onClick = (e) => {
@@ -29,7 +27,7 @@ class Navigation extends Component {
                 <li><Link to="/home" className="menu-item">Home</Link></li>
                 <li><Link to="/profile" className="menu-item">My Profile</Link></li>
                 <li><Link to="/contact" className="menu-item">Contact</Link></li>
-                <li><Logout/></li>
+                <li><Link to="about" className="menu-item"/>About</li>
               </ul>
             </div>
           </div>

@@ -9,6 +9,8 @@ const renderIcons = (category) => {
     return <i className="fas fa-volume-up"></i>
   } else if (category === "Studio") {
     return <i className="fas fa-border-all"></i>
+  } else if (category === "misc") {
+    return <i className="fas fa-question-circle"></i>
   }
 }
 
