@@ -33,9 +33,9 @@ class Course extends Component {
     if(this.state.userCourses) {
       return this.state.userCourses.includes(id)
       ? <p className="sign-up detail">Signed Up!</p>
-      : <button className="navbutton detail" onClick={() => {this.onSignUp(id)}}>Ilmoittadu</button>
+      : <button className="navbutton detail" onClick={() => {this.onSignUp(id)}}>Sign up</button>
     } else {
-      return <button className="navbutton detail" onClick={() => {this.onSignUp(id)}}>Ilmoittadu</button>
+      return <button className="navbutton detail" onClick={() => {this.onSignUp(id)}}>Sign up</button>
     }
   }
   onSignUp = (id) => {
