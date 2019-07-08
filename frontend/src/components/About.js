@@ -7,10 +7,13 @@ const About = () => {
         <h1>About</h1>
         <div className="contacts">
           <div className="contact-card">
-            <p>This is a placeholder app which I created from a "secret" app
-              I was asked to make for a client, and since I was quite happy with
-              the result I wanted to make a "generic" version of it with dummy data
-              and different theme so that I can showcase it in my github.
+            <p>This is a demo version of an App I created for a client, the app is a mobile-first
+              course-store which had a deadline of a month. 
+            </p>
+          </div>
+          <div className="contact-card">
+            <p>You can view courses, sign up to them, cancel your signing, search for courses by
+              tags and view your own profile. 
             </p>
           </div>
           <div className="contact-card">
