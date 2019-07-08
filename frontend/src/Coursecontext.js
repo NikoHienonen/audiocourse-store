@@ -132,10 +132,10 @@ class CourseProvider extends React.Component {
     this.checkIfFirstSignIn();
   }
   checkIfFirstSignIn = () => {
-    let visited = sessionStorage.getItem("visited");
+    let visited = sessionStorage.getItem("courseStoreVisited");
     if(visited !== "true" || !visited) {
-      sessionStorage.setItem("visited", "true");
-      sessionStorage.setItem("userCourses", "4324, 2352");
+      sessionStorage.setItem("courseStoreVisited", "true");
+      sessionStorage.setItem("courseStoreUserCourses", "4324, 2352");
     }
   }
   getCourses = (callback) => {
@@ -152,7 +152,7 @@ class CourseProvider extends React.Component {
     }
   }
   getUserCourses = (callback) => {
-    const courses = sessionStorage.getItem("userCourses");
+    const courses = sessionStorage.getItem("courseStoreUserCourses");
     if (courses) {
       let courseArray = this.setStringToNumArray(courses);
       callback(courseArray);
@@ -168,20 +168,20 @@ class CourseProvider extends React.Component {
   callback(found); 
   }
   signUpForACourse = (id, callback) => {
-    let storage = sessionStorage.getItem("userCourses");
+    let storage = sessionStorage.getItem("courseStoreUserCourses");
     let courseArray = this.setStringToNumArray(storage);
     if (!courseArray.includes(id)) {
       courseArray.push(id);
       let courses = courseArray.toString();
-      sessionStorage.setItem("userCourses", courses);
+      sessionStorage.setItem("courseStoreUserCourses", courses);
       callback(courses);
     }
   }
   cancelSignUp = (id, callback) => {
-    let storage = sessionStorage.getItem("userCourses");
+    let storage = sessionStorage.getItem("courseStoreUserCourses");
     let courseArray = this.setStringToNumArray(storage);
     let splicedArray = courseArray.filter(course => course !== id);
-    sessionStorage.setItem("userCourses", splicedArray);
+    sessionStorage.setItem("courseStoreUserCourses", splicedArray);
     callback(splicedArray);
   }
   render () {
