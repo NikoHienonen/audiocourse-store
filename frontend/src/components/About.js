@@ -17,7 +17,10 @@ const About = () => {
             </p>
           </div>
           <div className="contact-card">
-            <i className="fab fa-github"></i> https://github.com/NikoHienonen
+            <i className="fab fa-github"></i> 
+            <a href="https://github.com/NikoHienonen">
+              Visit my github from here!
+            </a>
           </div>
         </div>
       </div>
