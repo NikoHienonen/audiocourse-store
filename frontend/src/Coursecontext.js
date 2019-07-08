@@ -127,7 +127,7 @@ class CourseProvider extends React.Component {
         , tags: ["työhyvinvointi", "finen"]
       }
     ]
-  }/*
+  }
   componentDidMount() {
     this.checkIfFirstSignIn();
   }
@@ -135,9 +135,9 @@ class CourseProvider extends React.Component {
     let visited = sessionStorage.getItem("courseStoreVisited");
     if(visited !== "true" || !visited) {
       sessionStorage.setItem("courseStoreVisited", "true");
-      sessionStorage.setItem("courseStoreUserCourses", "4324, 2352");
+      sessionStorage.setItem("courseStoreUserCourses", "");
     }
-  }*/
+  }
   getCourses = (callback) => {
     callback(this.state.courses);
   }
@@ -169,24 +169,20 @@ class CourseProvider extends React.Component {
   }
   signUpForACourse = (id, callback) => {
     let storage = sessionStorage.getItem("courseStoreUserCourses");
-    if (storage) {
-      let courseArray = this.setStringToNumArray(storage);
-      if (!courseArray.includes(id)) {
-        courseArray.push(id);
-        let courses = courseArray.toString();
-        sessionStorage.setItem("courseStoreUserCourses", courses);
-        callback(courses);
-      }
+    let courseArray = this.setStringToNumArray(storage);
+    if (!courseArray.includes(id)) {
+      courseArray.push(id);
+      let courses = courseArray.toString();
+      sessionStorage.setItem("courseStoreUserCourses", courses);
+      callback(courses);
     }
   }
   cancelSignUp = (id, callback) => {
     let storage = sessionStorage.getItem("courseStoreUserCourses");
-    if (storage) {
-      let courseArray = this.setStringToNumArray(storage);
-      let splicedArray = courseArray.filter(course => course !== id);
-      sessionStorage.setItem("courseStoreUserCourses", splicedArray);
-      callback(splicedArray);
-    }
+    let courseArray = this.setStringToNumArray(storage);
+    let splicedArray = courseArray.filter(course => course !== id);
+    sessionStorage.setItem("courseStoreUserCourses", splicedArray);
+    callback(splicedArray);
   }
   render () {
     return (
