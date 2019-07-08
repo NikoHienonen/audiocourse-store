@@ -12,10 +12,8 @@ class Navigation extends Component {
       }
     }
   }
-  renderOrNot = () =>  {
-    let loggedIn = sessionStorage.getItem("loggedIn");
-    if(loggedIn === "True") {
-      return (
+  render() {
+    return (
       <div className="menu-wrap">
         <input type="checkbox" className="toggler"/>
         <div className="hamburger"><div></div></div>
@@ -34,14 +32,6 @@ class Navigation extends Component {
         </div>
       </div>
       );
-    } else {
-      return null;
-    }
-  }
-  render() {
-    return (
-      <this.renderOrNot/>
-    );
   }
 }
 
