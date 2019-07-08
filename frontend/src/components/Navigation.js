@@ -25,7 +25,7 @@ class Navigation extends Component {
                 <li><Link to="/home" className="menu-item">Home</Link></li>
                 <li><Link to="/profile" className="menu-item">My Profile</Link></li>
                 <li><Link to="/contact" className="menu-item">Contact</Link></li>
-                <li><Link to="/about" className="menu-item"/>About</li>
+                <li><Link to="/about" className="menu-item">About</Link></li>
               </ul>
             </div>
           </div>
