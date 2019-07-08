@@ -16,7 +16,7 @@ class Search extends Component{
   render(){
     return (
       <div className="menu-item">
-        <input className="unclickable" type="text" onChange={this.handleChange} placeholder="Hae kursseja..."></input>
+        <input className="unclickable" type="text" onChange={this.handleChange} placeholder="Search courses..."></input>
         <Link name="Search" className="navbutton" 
         to={`/search/${this.state.searchValue}`} disabled={!this.state.searchValue || this.state.searchValue === ""}>
         <i className="fas fa-search"></i>
